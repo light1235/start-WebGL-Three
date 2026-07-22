@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite'
 import glsl from "vite-plugin-glsl";
 
-// https://vite.dev/config/
 export default defineConfig({
+  server: {
+    fs: {
+      strict: false
+    }
+  },
   plugins: [
     glsl({
       include: [
